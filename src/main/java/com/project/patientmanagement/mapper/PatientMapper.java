@@ -6,11 +6,11 @@ import com.project.patientmanagement.model.Patient;
 public class PatientMapper {
     public static PatientResponseDTO toDTO(Patient patient){
         PatientResponseDTO patientDTO = new PatientResponseDTO();
-        patientDTO.setId(patient.getId().toString());
+        patientDTO.setId(patient.getId());
         patientDTO.setName(patient.getName());
         patientDTO.setEmail(patient.getEmail());
         patientDTO.setAddress(patient.getAddress());
-        patientDTO.setDateOfBirth(patient.getDateOfBirth().toString());
+        patientDTO.setDateOfBirth(patient.getDateOfBirth());
 
         return patientDTO;
     }

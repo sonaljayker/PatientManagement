@@ -7,20 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PatientResponseDTO {
+public class PatientRequestDTO {
 
-
-    private UUID id;
     private String name;
     private String email;
     private LocalDate dateOfBirth;
     private String address;
-
-
+    private LocalDate registeredDate;
 }

@@ -1,16 +1,18 @@
 package com.project.patientmanagement.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
+
 @Getter
 @Setter
 @Data
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Patient {
 
     @Id
@@ -31,56 +33,6 @@ public class Patient {
 
     @Column(nullable = false)
     private LocalDate registeredDate;
-
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public LocalDate getRegisteredDate() {
-        return registeredDate;
-    }
-
-    public void setRegisteredDate(LocalDate registeredDate) {
-        this.registeredDate = registeredDate;
-    }
-
 
 
 }
